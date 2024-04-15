@@ -126,26 +126,27 @@
 
     <div id="ladingPage" class="landingPage"></div>
     <div id="orbit">
-    <div id="header">
-        <div id="logo">
-            <img src="/img/dasd_1.png" id="">
-        </div>
-    
-        <div id="search">
-            <img src="/img/Vector.svg" alt="">
-            <input type="text" name="searching" id="searchText">
-        </div>
-    
-        <div onclick="openLayerpopup()" id="toggle"></div>
-        <div id="popup-layer">
-            <div id="popup-box">
-                <div class="popup-contents">
-                    <form action="#" id="loginForm">
-            
-                            <h1>LogIn</h1>
+        <div id="header">
+            <div id="logo">
+                <img src="/img/dasd_1.png" id="">
+            </div>
+
+            <div id="search">
+                <img src="/img/Vector.svg" alt="">
+                <input type="text" name="searching" id="searchText">
+            </div>
+
+            <img src="/img/toggle_off.png" class="toggleBtn" id="toggle" onclick="openLayerpopup()">
+            <div id="popup-layer">
+                <div id="popup-box">
+                    <div class="popup-contents">
+                        <form action="#" id="loginForm">
+
+                            <h1>LOGIN</h1>
                             <ul id="login">
                                 <li>
-                                    <input type="text" name="username" id="username" autofocus autocomplete="off" placeholder="사용자 이름 또는 이메일">
+                                    <input type="text" name="username" id="username" autofocus autocomplete="off"
+                                        placeholder="사용자 이름 또는 이메일">
                                 </li>
                                 <li>
                                     <input type="password" name="pw" id="pw" required placeholder="비밀번호">
@@ -156,12 +157,12 @@
                                 <input type="submit" name="" id="submitBtn" class="Btn" value="로그인">
                                 <button class="Btn" id="closeBtn" onclick="closeLayerpopup()">닫기</button>
                             </div>
-        
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
+            <div id="switch" onclick="login()" hidden></div>
         </div>
-        <div id="switch" onclick="login()"></div>
     </div>
 
 
