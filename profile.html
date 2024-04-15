@@ -41,95 +41,92 @@
     </div>
 
     
-<div id="pic">
-    <ul>
-        <li>
-            <img src="/asset/miji/cat_1.JPG" alt="">
+    <div id="pic">
+        <ul>
+            <li>
+                <img src="/asset/miji/cat_1.JPG" data-src="/asset/miji/cat_1_small.JPG" alt="" class="smallpic">
                 <div class="picText">
-                    <p></p>
+                    <p>크게 보려면 </br> 클릭하십시오</p>
                 </div>
-            </img>
-        </li>
-        <li>
-            <img src="/asset/miji/cat_2.JPG" alt="">
+            </li>
+            <li>
+                <img src="/asset/miji/cat_2.JPG" data-src="/asset/miji/cat_2_small.JPG" alt="" class="smallpic">
                 <div class="picText">
-                    <p></p>
+                    <p>크게 보려면 </br> 클릭하십시오</p>
                 </div>
-            </img>
-        </li>
-        <li>
-            <img src="/asset/miji/cat_3.JPG" alt="">
+            </li>
+            <li>
+                <img src="/asset/miji/cat_3.JPG" data-src="/asset/miji/cat_3_small.JPG" alt="" class="smallpic">
                 <div class="picText">
-                    <p></p>
+                    <p>크게 보려면 </br> 클릭하십시오</p>
                 </div>
-            </img>
-        </li>
-        <li>
-            <img src="/asset/miji/cat_4.JPG" alt="">
+            </li>
+            <li>
+                <img src="/asset/miji/cat_4.JPG" data-src="/asset/miji/cat_4_small.JPG" alt="" class="smallpic">
                 <div class="picText">
-                    <p></p>
+                    <p>크게 보려면 </br> 클릭하십시오</p>
                 </div>
-            </img>
-        </li>
-        <li>
-            <img src="/asset/miji/cat_5.JPG" alt="">
+            </li>
+            <li>
+                <img src="/asset/miji/cat_5.JPG" data-src="/asset/miji/cat_5_small.JPG" alt="" class="smallpic">
                 <div class="picText">
-                    <p></p>
+                    <p>크게 보려면 </br> 클릭하십시오</p>
                 </div>
-            </img>
-        </li>
-        <li>
-            <img src="/asset/miji/cat_6.JPG" alt="">
+            </li>
+            <li>
+                <img src="/asset/miji/cat_6.JPG" data-src="/asset/miji/cat_6_small.JPG" alt="" class="smallpic">
                 <div class="picText">
-                    <p></p>
+                    <p>크게 보려면 </br> 클릭하십시오</p>
                 </div>
-            </img>
-        </li>
-        <li>
-            <img src="/asset/miji/cat_7.JPG" alt="">
+            </li>
+            <li>
+                <img src="/asset/miji/cat_7.JPG" data-src="/asset/miji/cat_7_small.JPG" alt="" class="smallpic">
                 <div class="picText">
-                    <p></p>
+                    <p>크게 보려면 </br> 클릭하십시오</p>
                 </div>
-            </img>
-        </li>
-        <li>
-            <img src="/asset/miji/cat_8.JPG" alt="">
+            </li>
+            <li>
+                <img src="/asset/miji/cat_8.JPG" data-src="/asset/miji/cat_8_small.JPG" alt="" class="smallpic">
                 <div class="picText">
-                    <p></p>
+                    <p>크게 보려면 </br> 클릭하십시오</p>
                 </div>
-            </img>
-        </li>
-        <li>
-            <img src="/asset/miji/cat_9.JPG" alt="">
+            </li>
+            <li>
+                <img src="/asset/miji/cat_9.JPG" data-src="/asset/miji/cat_9_small.JPG" alt="" class="smallpic">
                 <div class="picText">
-                    <p></p>
+                    <p>크게 보려면 </br> 클릭하십시오</p>
                 </div>
-            </img>
-        </li>
-    </ul>
-</div>
+            </li>
+        </ul>
+    </div>
 </div>
 <div id="bigBox">
     <img src="" alt="" id="bigImg">
 </div>
+<script>
+    let Smallpic = document.getElementsByClassName("picText");
+    let big_Box = document.getElementById("bigBox");
+    let BigBox_Img = document.getElementById("bigImg");
+
+    function show_bigbox() {
+        let BigImg = this.parentElement.getElementsByTagName('img')[0].getAttribute("data-src");
+        BigBox_Img.setAttribute("src", BigImg);
+        big_Box.style.display = 'block';
+
+        // 이미지 크기 조절
+        BigBox_Img.style.maxWidth = "60%"; // 최대 너비를 화면 너비의 80%로 설정
+        BigBox_Img.style.maxHeight = "80%";
+    }
+
+
+    for (let i = 0; i < 9; i++) {
+        Smallpic[i].addEventListener("click", show_bigbox);
+    }
+
+    big_Box.onclick = () => {
+        bigBox.style.display = 'none';
+    }
+</script>
 </body>
 </html>
 
-<script>
-    let PicImg = document.getElementsByClassName("picImg");
-    let BigBox = document.getElementById("bigBox");
-    let BigBox_Img = document.getElementById("bigBox_Img");
-
-    function show_bigbox(){
-        
-    }
-    
-    PicImg.onclick = ()=>{
-        bigBox.style.display = 'block';
-    }
-
-    BigBox.onclick = ()=>{
-        bigBox.style.display = 'none';
-    }
-
-</script>
