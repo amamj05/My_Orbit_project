@@ -1,18 +1,28 @@
 //popUP js
 const openLayerpopup = () => {
+    let btnStatus = false;
+    if (btnStatus == false) {
+        document.querySelector(".toggleBtn").setAttribute("src", "/img/toggle_on.png");
+        btnStatus = true;
+    }
+    else {
+        document.querySelector(".toggleBtn").setAttribute("src", "/img/toggle_off.png");
+        btnStatus = false;
+    }
+
     document.querySelector('#popup-layer').style.display = "block";
     document.getElementById("loginForm").addEventListener("submit", onSubmit);
 }
 const closeLayerpopup = () => {
     document.querySelector('#popup-layer').style.display = "none";
     document.getElementById("loginForm").removeEventListener("submit", onSubmit);
+    document.querySelector(".toggleBtn").setAttribute("src", "/img/toggle_off.png");
 }
 
 //로그인창
-
 const onSubmit = (event) => {
     event.preventDefault();
-
+    let btnStatus = false;
     var username = document.getElementById("username").value;
     var password = document.getElementById("pw").value;
 
@@ -21,6 +31,10 @@ const onSubmit = (event) => {
     } else {
         console.log("Username:", username);
         console.log("Password:", pw);
+        btnStatus = true;
+        document.querySelector('#popup-layer').style.display = "none";
+        document.getElementById("loginForm").removeEventListener("submit", onSubmit);
+        document.querySelector(".toggleBtn").setAttribute("src", "/img/toggle_on.png");
         alert("Login successful!");
     }
 };
