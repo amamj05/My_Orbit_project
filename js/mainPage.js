@@ -57,3 +57,11 @@ function toggleVisibility(showId, hideId){
         }
     });
 }
+
+
+//창끼리 이동
+
+function loadURL(url){
+    window.opener.location = url;//아빠의 주소에 내 주소를 넘겨줌.
+    window.close();//나는 아빠를 next로 연결시켜줬으니 이만 끝나겠다.
+}
