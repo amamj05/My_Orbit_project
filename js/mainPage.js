@@ -1,22 +1,30 @@
-//orbitMove
-let status = false;
-function login() {
-    if (status == false) {
-        document.getElementById("switch").addEventListener('click', function () {
-            document.getElementById("switch").style.transform = "translateX(-50px)";
-            document.getElementById("switch").style.color = "red";
-        })
-        status = true;
-    }
-
-    else {
-        document.getElementById("switch").addEventListener('click', function () {
-            document.getElementById("switch").style.transform = "none";
-            document.getElementById("switch").style.color = "initial";
-        })
-        status = false;
-    }
+//popUP js
+const openLayerpopup = () => {
+    document.querySelector('#popup-layer').style.display = "block";
+    document.getElementById("loginForm").addEventListener("submit", onSubmit);
 }
+const closeLayerpopup = () => {
+    document.querySelector('#popup-layer').style.display = "none";
+    document.getElementById("loginForm").removeEventListener("submit", onSubmit);
+}
+
+//로그인창
+
+const onSubmit = (event) => {
+    event.preventDefault();
+
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("pw").value;
+
+    if (username === "" || password === "" || (username && password === "")) {
+        alert("아이디 또는 비밀번호를 입력해주세요.");
+    } else {
+        console.log("Username:", username);
+        console.log("Password:", pw);
+        alert("Login successful!");
+    }
+};
+
 
 //landing
 
