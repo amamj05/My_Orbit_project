@@ -19,48 +19,90 @@
             height: 100%;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.445);
+            background-color: rgba(0, 0, 0, 0.562);
             z-index: 10000;
         }
 
         #popup-box {
             overflow: auto;
-            width: 370px;
-            max-height: 320px;
+            width: 250px;
+            /* max-height: 360px; */
             background-color: white;
             position: absolute;
+            padding: 20px;
             top: 50%;
             left: 50%;
+            border-radius: 40px;
             transform: translate(-50%, -50%);
             z-index: 1000;
         }
 
         #login {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             list-style: none;
-            height: 190px;
+            height: 100px;
+            margin: 0; padding: 0;
         }
 
         #login li {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
-        #login label {
-            display: inline-block;
-            margin-right: 10px;
+        #loginForm{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
+
+        .loginBtn{
+            display: inherit;
+            align-items: inherit;
+            flex-direction: inherit;
+            margin-bottom: 10px;
+        }
+
+        #username, #pw{
+            height: 25px;
+            border-radius: 5px;
+            border: solid 1px gray;
+            padding: 3px;
+        }
+        .Btn{
+            margin-bottom: 10px;
+            width: 180px;
+            height: 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+        #submitBtn:hover{
+            background-color: #FF98B7;
+            color: white;
+        }
+        #closeBtn:hover{
+            background-color: #7e7e7e;
+            color: white;
+        }
+
+
         #header {
-            background-color: white;
-            z-index: 4;
-        }
-        
-        #rec {
-            margin-left: 45%;
-            margin-bottom: 25%;
-            width: 11.536px;
-            height: 11.536px;
-            transform: rotate(45deg);
-            background: #FF98B7;
-        }
+    background-color: rgba(255, 255, 255, 0.493);
+    z-index: 4;
+}
+
+#rec {
+    margin-left: 45%;
+    margin-bottom: 25%;
+    width: 11.536px;
+    height: 11.536px;
+    transform: rotate(45deg);
+    background: #FF98B7;
+}
+    
 </style>
 
 <body>
@@ -82,24 +124,22 @@
             <div id="popup-box">
                 <div class="popup-contents">
                     <form action="#" id="loginForm">
-                        <fieldset>
-                            <legend>로그인 창</legend>
+            
+                            <h1>LOGIN</h1>
                             <ul id="login">
                                 <li>
-                                    <label for="user_id">아이디 </label>
-                                    <input type="text" name="username" id="username" autofocus autocomplete="off">
+                                    <input type="text" name="username" id="username" autofocus autocomplete="off" placeholder="사용자 이름 또는 이메일">
                                 </li>
                                 <li>
-                                    <label for="user_pw">비밀번호 </label>
-                                    <input type="password" name="pw" id="pw">
+                                    <input type="password" name="pw" id="pw" required placeholder="비밀번호">
                                 </li>
                             </ul>
-                            <div>
+                            <div class="loginBtn">
                                 <p id="result"></p>
-                                <input type="submit" name="" id="" value="로그인">
-                                <button onclick="closeLayerpopup()">닫기</button>
+                                <input type="submit" name="" id="submitBtn" class="Btn" value="로그인">
+                                <button class="Btn" id="closeBtn" onclick="closeLayerpopup()">닫기</button>
                             </div>
-                        </fieldset>
+        
                     </form>
                 </div>
             </div>
