@@ -12,6 +12,12 @@
 
 <style>
 
+        @font-face {
+            font-family: 'Hyperion';
+            font-style: 'normal'; /* font 스타일 정의 (기울임, 일반) */
+            src: url('/asset/Hyperion\ Light.otf');
+        }
+
 #popup-layer {
             display: none;
             position: fixed;
@@ -29,7 +35,7 @@
             /* max-height: 360px; */
             background-color: white;
             position: absolute;
-            padding: 20px;
+            padding: 10px;
             top: 50%;
             left: 50%;
             border-radius: 40px;
@@ -45,6 +51,15 @@
             list-style: none;
             height: 100px;
             margin: 0; padding: 0;
+        }
+
+        h1 {
+        font-family: 'Hyperion', normal;
+        font-size: 3.5rem;
+        background: linear-gradient(180deg, #FF698B 20.5%, #DA8DF5 59%, #47C3FF 86%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         }
 
         #login li {
@@ -67,9 +82,11 @@
 
         #username, #pw{
             height: 25px;
-            border-radius: 5px;
+            width: 180px;
+            border-radius: 10px;
             border: solid 1px gray;
-            padding: 3px;
+            padding: 3px 0px 3px 8px;
+            font-size: 10px;
         }
         .Btn{
             margin-bottom: 10px;
@@ -84,7 +101,7 @@
             color: white;
         }
         #closeBtn:hover{
-            background-color: #7e7e7e;
+            background-color: #c4c4c4;
             color: white;
         }
 
@@ -125,7 +142,7 @@
                 <div class="popup-contents">
                     <form action="#" id="loginForm">
             
-                            <h1>LOGIN</h1>
+                            <h1>LogIn</h1>
                             <ul id="login">
                                 <li>
                                     <input type="text" name="username" id="username" autofocus autocomplete="off" placeholder="사용자 이름 또는 이메일">
