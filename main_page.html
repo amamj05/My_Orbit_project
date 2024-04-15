@@ -11,6 +11,12 @@
 </head>
 
 <body>
+<div id="landingPage" class="landingPage">
+    <img src="/img/logo_img-02.svg" alt="">
+</div>
+
+
+<div id="orbit">
     <div id="header">
         <div id="logo">
             <img src="/img/dasd_1.png" id="">
@@ -24,27 +30,6 @@
         <div id="toggle"></div>
         <div id="switch" onclick="login()"></div>
     </div>
-
-    <script>
-        let status = false;
-        function login() {
-            if (status == false) {
-                document.getElementById("switch").addEventListener('click', function () {
-                    document.getElementById("switch").style.transform = "translateX(-50px)";
-                    document.getElementById("switch").style.color = "red";
-                })
-                status = true;
-            }
-
-            else {
-                document.getElementById("switch").addEventListener('click', function () {
-                    document.getElementById("switch").style.transform = "none";
-                    document.getElementById("switch").style.color = "initial";
-                })
-                status = false;
-            }
-        }
-    </script>
 
 
     <div class="user1">
@@ -76,7 +61,9 @@
         <img src="/img/default_icon.svg" alt="이미지">
         <p>Search new Orbit</p>
     </div>
+</div>
 
+<script src="/js/mainPage.js"></script>
 </body>
 
 </html>

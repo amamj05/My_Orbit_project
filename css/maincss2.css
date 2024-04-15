@@ -1,22 +1,54 @@
     body{
     width: 100%; margin: 0 auto; 
-    background: linear-gradient(#F0FCFF, #FEEDF3); /* background 속성을 사용하여 그라데이션 설정 */
+    background: linear-gradient(180deg, #F0FCFF 9.5%, #FEEDF3 100%); /* background 속성을 사용하여 그라데이션 설정 */
     background-repeat: no-repeat;
     background-size: 100% 100%; /*그라데이션은 백그라운드사이즈:커버 안먹힘*/
     height: 100vh;
+    overflow: hidden;
+    animation-fill-mode: backwards;
     }
      
+
+    #orbit, #landingPage {
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    }
+
+    #landingPage {
+    opacity: 1;
+    }
+
+    .visible {
+    opacity: 1;
+    }
+
+    .landingPage {
+    position: fixed;
+    background: linear-gradient(#F0FCFF, #FEEDF3); /* background 속성을 사용하여 그라데이션 설정 */
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /*그라데이션은 백그라운드사이즈:커버 안먹힘*/
+    }
   
+    .landingPage img{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+      }
+
   #logo{
       width: 100%; height: 100%;
       background: rgba(255, 255, 255, 0.70);
-      box-shadow: 0px 1px 12.399999618530273px 2px rgba(0, 0, 0, 0.10);
+      box-shadow: 0px 1px 12.4px 2px rgba(0, 0, 0, 0.10);
       z-index: 5;
   }
   #search{
       width: 25%; height: 5%;
       background: white;
-      box-shadow: 3px 4px 8.399999618530273px rgba(0, 0, 0, 0.15); border-radius: 31px;
+      box-shadow: 3px 4px 8.4px rgba(0, 0, 0, 0.15); border-radius: 31px;
       position: absolute;
       left: 40%;
       top:2.5%;
