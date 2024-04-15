@@ -9,6 +9,7 @@ body{
     background-size: 100% 100%; /*그라데이션은 백그라운드사이즈:커버 안먹힘*/
     background: linear-gradient(180deg, rgba(204, 240, 255, 0.5) 10%, 
     rgba(250, 240, 235, 0.50) 80.5%);
+    font-family: "Noto Sans KR";
 }
 
 
@@ -114,6 +115,13 @@ body{
 
 .frndName{
      padding: 10px;
+     width: 241px;
+     text-align: center;
+    }
+
+    .frndName:hover{
+        background-color:  rgba(177, 232, 255, 0.596);
+        transition-duration: 1s; 
     }
 
     a{
@@ -123,6 +131,7 @@ body{
         text-decoration: none;
         color: black;
     }
+
 
 
 /*여기서부터 갤러리 css*/
