@@ -12,14 +12,18 @@ body{
     rgba(250, 240, 235, 0.50) 80.5%);
 }
 
+.container{
+    display: flex;
+    padding: 20px;
+
+}
+
 /*좌측 프로필 css*/
 #prfCard{
     width: 400px;
     height: 100%;
     padding: 29px 46px 29px;
-    float: left;
-    flex-direction: column;
-    align-items: center;
+    margin-left: 20px;
     box-sizing: border-box;
 }
 .prfCard_header{
@@ -36,6 +40,9 @@ body{
 }
 .userInfo{
     padding-bottom: 15px;
+}
+.userInfo p{
+    font-size: 5px;
 }
 .btnContainer{
     padding-bottom: 17px;
@@ -73,6 +80,8 @@ body{
 
 /*여기서부터 갤러리 css*/
 
+
+#pic{margin-left: 30px;}
 #pic ul {list-style: none; width: 100%; }
 #pic li{
     position: relative; 
