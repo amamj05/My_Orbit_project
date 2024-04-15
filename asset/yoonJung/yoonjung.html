@@ -21,8 +21,8 @@
             <div class="prfImg">
                 <img style="border-radius: inherit;" src="/asset/yoonJung/yoonJung_profile.jpg" alt="profile">
             </div>
-            <h2 class="userName">최윤정</h2>
-            <p class="userInfo">상세 정보 확인하기</p>
+            <h2 class="userName">👀최윤정👀</h2>
+            <p class="userInfo">✨안녕하세용✨</p>
             <div class="btnContainer">
                 <button class="btn">
                     + 추가하기
@@ -33,9 +33,12 @@
             </div>
         </div>
         <div class="prfCard_frndList">
-            <p class="frndName">신수민</p>
-            <p class="frndName">배다은</p>
-            <p class="frndName">홍미지</p>
+            <p class="frndName"><a href="/asset/sumin/sumin.html"
+                onclick="loadURL('this.href'); return false;">신수민</a></p>
+            <p class="frndName"><a href="/asset/daeun/daeun.html"
+                onclick="loadURL('this.href'); return false;">배다은</a></p>
+                <p class="frndName"><a href="/asset/miji/miji.html"
+                    onclick="loadURL('this.href'); return false;">홍미지</a></p>
         </div>
     </div>
 
@@ -125,6 +128,12 @@
     big_Box.onclick = () => {
         bigBox.style.display = 'none';
     }
+
+    function loadURL(url){
+    window.opener.location = url;//아빠의 주소에 내 주소를 넘겨줌.
+    window.close();//나는 아빠를 next로 연결시켜줬으니 이만 끝나겠다.
+}
+
 </script>
 </body>
 </html>

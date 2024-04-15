@@ -7,8 +7,7 @@ body{
     width: 100%; margin: 0 auto; 
     background-repeat: no-repeat;
     background-size: 100% 100%; /*그라데이션은 백그라운드사이즈:커버 안먹힘*/
-    height: 100vh;
-    background: linear-gradient(180deg, rgba(204, 240, 255, 0.5) 0%, 
+    background: linear-gradient(180deg, rgba(204, 240, 255, 0.5) 10%, 
     rgba(250, 240, 235, 0.50) 80.5%);
 }
 
@@ -117,6 +116,13 @@ body{
      padding: 10px;
     }
 
+    a{
+        text-decoration: none;
+    }
+    a:link, a:visited{
+        text-decoration: none;
+        color: black;
+    }
 
 
 /*여기서부터 갤러리 css*/

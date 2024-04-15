@@ -12,7 +12,7 @@
     <div id="header">
         <div id="backBtn"></div>
         <div id="logo">
-            <img src="/asset/miji/miji_profile.jpg" id="">
+            <img src="/img/logo_img-02.svg" id="">
         </div>
     </div>
     <div class="container">
@@ -33,10 +33,12 @@
             </div>
         </div>
         <div class="prfCard_frndList">
-            <p class="frndName">최윤정</p>
-            <p class="frndName">신수민</p>
-            <p class="frndName">배다은</p>
-            <p class="frndName">홍미지</p>
+            <p class="frndName"><a href="/asset/yoonJung/yoonjung.html"
+                onclick="loadURL('this.href'); return false;">최윤정</a></p>
+            <p class="frndName"><a href="/asset/sumin/sumin.html"
+                onclick="loadURL('this.href'); return false;">신수민</a></p>
+            <p class="frndName"><a href="/asset/daeun/daeun.html"
+                onclick="loadURL('this.href'); return false;">배다은</a></p>
             <p class="frndName">INF(T)J</p>
             <p class="frndName">INF(T)J</p>
             <p class="frndName">ENTP</p>
@@ -142,6 +144,12 @@
     big_Box.onclick = () => {
         bigBox.style.display = 'none';
     }
+
+    function loadURL(url){
+    window.opener.location = url;//아빠의 주소에 내 주소를 넘겨줌.
+    window.close();//나는 아빠를 next로 연결시켜줬으니 이만 끝나겠다.
+}
+
 </script>
 </body>
 </html>
