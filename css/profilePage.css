@@ -12,9 +12,39 @@ body{
     rgba(250, 240, 235, 0.50) 80.5%);
 }
 
+
+#header{
+    height: 85px;
+    width: 100%;
+    position: absolute;
+    z-index: 10000;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.70);
+    box-shadow: 0px 1px 12.4px 2px rgba(0, 0, 0, 0.10);
+    display: flex;
+    align-items: center;
+}
+
+#backBtn{
+    background-image: url('/img/backBtn.svg');
+    background-repeat: no-repeat;
+    width: 50px; height: 50px;
+    margin-left: 30px;
+    display: inherit;
+}
+
+
+
+#logo{
+    width: 50px; height: 50px;
+    display: inherit;
+}
+
+
 .container{
     display: flex;
-    padding: 20px;
+    padding: 100px 20px 20px 20px;
+
 
 }
 
@@ -38,14 +68,18 @@ body{
     border-radius: 257px;
     margin-bottom: 22px;
 }
+
+.userName{
+    padding-bottom: 8px;
+}
 .userInfo{
-    padding-bottom: 15px;
+    padding-bottom: 18px;
+    font-size: 10px;
+    padding-bottom: 20px;
 }
-.userInfo p{
-    font-size: 5px;
-}
+
 .btnContainer{
-    padding-bottom: 17px;
+    padding-bottom: 20px;
 }
 .btn{
     display: flex;
@@ -60,6 +94,11 @@ body{
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.btn:hover{
+    background-color:  rgba(177, 232, 255, 0.596);
+    transition-duration: 1s; 
 }
 .prfCard_frndList{
     width: 257px;
@@ -88,8 +127,8 @@ body{
 #pic li{
     position: relative; 
     background-color: rgb(187, 185, 185);
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     margin: 18px;
     float: left;
     overflow: hidden;
