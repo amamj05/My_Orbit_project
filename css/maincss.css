@@ -1,0 +1,8 @@
+body{
+  width: 100%; margin: 0 auto; 
+  background: linear-gradient(#F0FCFF, #FEEDF3); /* background 속성을 사용하여 그라데이션 설정 */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+}
+      
