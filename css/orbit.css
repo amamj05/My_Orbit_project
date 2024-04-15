@@ -1,0 +1,191 @@
+body {
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /*그라데이션은 백그라운드사이즈:커버 안먹힘*/
+    background: linear-gradient(180deg, #F0FCFF 9.5%, #FEEDF3 100%);
+    overflow: hidden;
+    animation-fill-mode: backwards;
+}
+
+#header {
+    background-color: rgba(255, 255, 255, 0.493);
+    z-index: 4;
+}
+
+#rec {
+    margin-left: 45%;
+    margin-bottom: 25%;
+    width: 11.536px;
+    height: 11.536px;
+    transform: rotate(45deg);
+    background: #FF98B7;
+}
+
+.user1 {
+    width: 70px;
+    height: 70px;
+    top: 210px;
+    left: 380px;
+    position: absolute;
+    border-radius: 50%;
+    animation: floatAnimation 5s infinite ease-in-out;
+    z-index: 1;
+    font-size: 12px;
+    text-align: center;
+}
+
+.user2 {
+    width: 70px;
+    height: 70px;
+    top: 450px;
+    left: 470px;
+    position: absolute;
+    border-radius: 50%;
+    animation: floatAnimation 5s infinite ease-in-out;
+    z-index: 1;
+    font-size: 12px;
+    text-align: center;
+}
+
+.user3 {
+    width: 70px;
+    height: 70px;
+    top: 280px;
+    right: 560px;
+    position: absolute;
+    border-radius: 50%;
+    animation: floatAnimation 5s infinite ease-in-out;
+    z-index: 1;
+    font-size: 12px;
+    text-align: center;
+}
+
+.user4 {
+    width: 70px;
+    height: 70px;
+    bottom: 240px;
+    right: 160px;
+    position: absolute;
+    border-radius: 50%;
+    animation: floatAnimation 5s infinite ease-in-out;
+    z-index: 1;
+    font-size: 12px;
+    text-align: center;
+}
+
+.user1 img,
+.user2 img,
+.user3 img,
+.user4 img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+@keyframes floatAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#orbit1 {
+    width: 110%;
+    /* 타원의 가로 길이 */
+    height: 1500px;
+    /* 타원의 세로 길이 */
+    border: 2px solid #DFDFDF;
+    /* 테두리 스타일 */
+    border-radius: 100%;
+    /* 타원 모양으로 만듦 */
+    position: relative;
+    overflow: hidden;
+    left: -75px;
+}
+
+#orbit2 {
+    width: 90%;
+    /* 타원의 가로 길이 */
+    height: 1400px;
+    /* 타원의 세로 길이 */
+    border: 2px solid #DFDFDF;
+    /* 테두리 스타일 */
+    border-radius: 100%;
+    /* 타원 모양으로 만듦 */
+    position: absolute;
+    overflow: hidden;
+    top: 175px;
+    left: 70px;
+}
+
+#orbit3 {
+    width: 73%;
+    /* 타원의 가로 길이 */
+    height: 1200px;
+    /* 타원의 세로 길이 */
+    border: 2px solid #DFDFDF;
+    /* 테두리 스타일 */
+    border-radius: 100%;
+    /* 타원 모양으로 만듦 */
+    position: absolute;
+    overflow: hidden;
+    top: 300px;
+    left: 200px;
+}
+
+#orbit4 {
+    width: 50%;
+    /* 타원의 가로 길이 */
+    height: 800px;
+    /* 타원의 세로 길이 */
+    border: 2px solid #DFDFDF;
+    /* 테두리 스타일 */
+    border-radius: 100%;
+    /* 타원 모양으로 만듦 */
+    position: absolute;
+    overflow: hidden;
+    top: 410px;
+    left: 370px;
+}
+
+#orbit5 {
+    width: 33%;
+    /* 타원의 가로 길이 */
+    height: 500px;
+    /* 타원의 세로 길이 */
+    border: 2px solid #DFDFDF;
+    /* 테두리 스타일 */
+    border-radius: 100%;
+    /* 타원 모양으로 만듦 */
+    position: absolute;
+    overflow: hidden;
+    top: 510px;
+    left: 500px;
+}
+
+.findUser {
+    bottom: 20px;
+    left: 44%;
+    position: absolute;
+    text-align: center;
+}
+
+.findUser img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.findUser p {
+    width: 160px;
+    height: 35px;
+    border-radius: 31px;
+    background: rgba(198, 198, 198, 0.514);
+    color: white;
+    box-shadow: 3px 4px 8.4px 0px rgba(0, 0, 0, 0.15);
+    line-height: 35px;
+}
